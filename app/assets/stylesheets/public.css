@@ -1,0 +1,133 @@
+/* Navigation styles */
+
+
+/* index.html.erb styles */
+
+/* Start stylings for the hero-img div */
+.hero-img{
+	background-image: url('takeout.jpg');
+	background-size: cover;
+	color: white;
+	margin-top:-20px;
+	font-size: 1.5em;
+	min-height: 550px;
+}
+
+.hero-img h1, .hero-img p {
+	margin-top:40px;
+}
+
+#postal_field{
+	min-width: 100%;
+	color:black;
+	margin-left: 120px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 8px;
+}
+
+.col-md-3{
+}
+
+.margin-row{
+	margin-top:60px;
+}
+
+.feed-btn{
+	margin-top:2px;
+	margin-left: 120px;
+}
+
+/* Stop styles for hero-img div */
+
+/* Start styling for info div */
+
+#info-header{
+	margin-top: 60px;
+}
+
+.info-grid{
+	padding: 100px;
+	min-height: 600px;
+
+}
+
+.info-grid .col-md-4{
+	min-height: 200px;
+	text-align: center;
+}
+
+.scissors{
+	max-height: 100px;
+	min-width: 100px;
+}
+
+
+@media screen and (	max-width: 992px){
+	#postal_field{
+		margin-left: 11%;
+		margin-right: 60px;
+		min-width: 77%;
+	}
+
+	.feed-btn{
+		margin-top:15px;
+		margin-left: 43%;
+	}
+
+	#info-div{
+		padding-bottom: 130px;
+	}
+}
+
+@media screen and (max-width: 707px) and (min-width: 425px){
+	.feed-btn{
+		margin-left: 41%;
+	}
+
+}
+
+@media screen and (max-width: 424px){
+	.feed-btn{
+		margin-left: 37%;
+	}
+
+	
+}
+
+/* Stop styling for info div */
+
+/* start styling for footer */
+
+.footer{
+	background-color: #1d1e1a;
+	color:white;
+	padding: 50px;
+
+}
+
+.footer-list{
+	margin-left: -40px;
+	color: gray;
+	list-style-type: none;
+}
+
+.footer-list li {
+	padding: 5px;
+}
+
+.footer-list li a {
+	text-decoration: none;
+	color:gray;
+}
+
+.footer-list li a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+.footer-container{
+	margin-bottom: 0;
+}
+/* Stop styling for footer */
+
