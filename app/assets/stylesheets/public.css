@@ -38,6 +38,19 @@
 	margin-left: 120px;
 }
 
+.steps-div {
+	text-align: center;
+}
+
+@media screen and (	max-width: 992px){
+	.steps-div p{
+		margin-top: 0;
+	}
+
+	.steps-div-last {
+		margin-bottom: 20px;
+	}
+}
 /* Stop styles for hero-img div */
 
 /* Start styling for info div */

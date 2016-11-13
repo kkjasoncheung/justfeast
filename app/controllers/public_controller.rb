@@ -7,4 +7,14 @@ class PublicController < ApplicationController
 
   def cart
   end
+
+  def help
+
+  end
+
+  def login
+  
+  end
+
+
 end
