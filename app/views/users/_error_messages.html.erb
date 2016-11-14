@@ -1,0 +1,12 @@
+<% if user && user.errors.size > 0 %>
+	<div id="error_explanation">
+		<h3 class="errors_count"><%= pluralize(user.errors.size, "error")%></h3>
+		<ul>
+		<% user.errors.full_messages.each do |message|%>
+			<li>
+				<%= message %>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>

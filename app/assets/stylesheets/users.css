@@ -1,0 +1,92 @@
+/* Error Fields  */
+
+#error_explanation{
+	background-color: #ff8080;
+	border-top: 5px solid #ff4d4d;
+	border-radius: 5px;
+	margin: 0 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#error_explanation ul {
+	list-style: none;
+}
+
+.field_with_errors input{
+	border:1px solid red;
+}
+
+/* General Form styles */
+
+#signup-container{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.field{
+	margin-bottom: 20px;
+}
+
+.field input{
+	width:375px;
+	height:40px;
+	padding-left: 10px;
+	border-radius: 3px;
+	border: 1px solid #999999;
+
+}
+
+#new_user_header{
+	color: #0099cc;
+}
+
+.submit-btn{
+	background-color: #febe36;
+	height:50px;
+	width: 200px;
+	transition: 0.1s linear;
+}
+.submit-btn:hover{
+	opacity: 0.8;
+}
+
+/* Social network signins (facebook and google) */
+
+.facebook, .google{
+	border: 1px solid red;
+	padding:20px 40px;
+	width: 375px;
+	color: white;
+	font-size: 22px;
+	border-radius: 3px;
+	transition: 0.1s linear;
+}
+
+.facebook{
+	background-color: #354386;
+	border: 1px solid #354386;
+}
+
+.google{
+	border:1px solid #3169f5;
+	background-color: #3169f5;
+}
+
+
+.facebook-div, .google-div{
+	margin-bottom: 10px;
+}
+
+.facebook:hover {
+	background-color: white;
+	color: #354386;
+}
+
+.google:hover {
+	background-color: white;
+	color: #3169f5;
+}
+
+

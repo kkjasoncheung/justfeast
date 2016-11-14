@@ -8,4 +8,14 @@ class Restaurant < ApplicationRecord
 	has_many :items
 
 
+	#validations
+
+	validates :name, :presence=>true, :uniqueness=>true
+	validates :owner, :presence=>true
+	validates :address, :presence=>true, :uniqueness=>true
+	validates :hours, :presence=>true
+	validates :phone, :presence=>true, :uniqueness=>true, :numericality=>true,
+						:length=>{:is=>10}
+	validates :admin_id, :presence=>true
+
 end

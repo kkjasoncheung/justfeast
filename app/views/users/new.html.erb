@@ -1,5 +1,29 @@
-<h1>New User</h1>
 
-<%= render 'form', user: @user %>
+<div class="container" id="signup-container">
+	<h1 id="new_user_header">Create your JustFeast Account!</h1>
+	<br>
 
-<%= link_to 'Back', users_path %>
+	<!-- Don't have to say render(:partial=> '...', :locals=>{:user=>@user}) -->
+	<%= render "error_messages", :user=>@user %>
+	<h4>Sign in with</h4>
+	<br>
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="facebook-div">
+				<%= button_to("Facebook", 'http://www.w3schools.com/colors/colors_picker.asp', :class=>'facebook') %>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="google-div">
+				<%= button_to("Google", 'https://www.google.ca/?gws_rd=ssl',:class=>'google')%>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<br>
+	<%= render 'form', user: @user %>
+
+	<br>
+
+	<h4>Already have an account? <%= link_to("Sign in here", login_public_index_path) %></h4>
+</div>
