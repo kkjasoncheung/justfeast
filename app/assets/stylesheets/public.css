@@ -2,7 +2,6 @@
 
 .navbar-default .navbar-header, .navbar-default .collapse {
 	background-color:#c30000;
-	border: 1px solid #c30000;
 }
 
 .navbar .navbar-header .navbar-toggle .icon-bar {
@@ -13,6 +12,7 @@
 }
 
 .navbar-default .collapse ul li a, .navbar-default .navbar-header a{
+	border: 1px solid #c30000;
 	color: white;
 }
 
@@ -72,7 +72,7 @@
 	}
 
 	.steps-div-last {
-		margin-bottom: 20px;
+		margin-bottom: 35px;
 	}
 }
 /* Stop styles for hero-img div */
