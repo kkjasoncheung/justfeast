@@ -4,26 +4,40 @@
 	background-color:#c30000;
 }
 
-.navbar .navbar-header .navbar-toggle .icon-bar {
-	background-color: white;
-}
-.navbar .navbar-header .navbar-toggle:hover{
+.navbar{
 	background-color: #c30000;
+	margin-left: 0px;
+}
+
+.icon-bar {
+	background-color: white;
 }
 
 .navbar-default .collapse ul li a, .navbar-default .navbar-header a{
 	color: white;
 }
 
-
-
- .navbar-default .navbar-header a:hover{
- 	color: white;
- }
-.navbar-default .collapse ul li a:hover{
-	color: #c30000;
-	background-color: white ;
+.navbar .navbar-header a{
+	color:white;
+	background-color: #c30000;
+	text-decoration: none;
 }
+
+.navbar-nav li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navbar-nav li a:hover{
+	color: black;	
+}
+
+.navbar-nav li{
+	background-color: #c30000;
+}
+
+
+
 /* index.html.erb styles */
 
 /* Start stylings for the hero-img div */
@@ -59,6 +73,7 @@
 .feed-btn{
 	margin-top:2px;
 	margin-left: 120px;
+	background-color: #feaa01;
 }
 
 .steps-div {
@@ -68,11 +83,14 @@
 @media screen and (	max-width: 992px){
 	.steps-div p{
 		margin-top: 0;
+		margin-bottom: 50px;
 	}
 
 	.steps-div-last {
 		margin-bottom: 35px;
 	}
+
+
 }
 /* Stop styles for hero-img div */
 
@@ -111,8 +129,15 @@
 		margin-left: 43%;
 	}
 
+
 	#info-div{
-		padding-bottom: 130px;
+		padding-bottom: 180px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	#info-div{
+		padding: 0;
 	}
 }
 
@@ -165,5 +190,8 @@
 .footer-container{
 	margin-bottom: 0;
 }
+
+
+
 /* Stop styling for footer */
 
