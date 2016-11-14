@@ -6,6 +6,16 @@
 </p>
 
 <p>
+	<strong>Belongs to: </strong>
+	<%= link_to @item.restaurant.name, restaurant_path(@item.restaurant.id) %>
+</p>
+
+<p>
+  <strong>Food Category:</strong>
+  <%= link_to @item.food_category.name, '#' %>
+</p>
+
+<p>
   <strong>Price:</strong>
   <%= @item.price %>
 </p>

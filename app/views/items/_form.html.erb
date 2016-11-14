@@ -26,6 +26,19 @@
     <%= f.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= f.label :restaurant_id, "Restaurant ID" %>
+    <%= f.select(:restaurant_id, @restaurants.map {|r| [r.name, r.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :food_category_id %>
+    <%= f.select(:food_category_id, @food_categories.map { |f| [f.name, f.id]}) %>
+  </div>
+
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -17,5 +17,5 @@ class Restaurant < ApplicationRecord
 	validates :phone, :presence=>true, :uniqueness=>true, :numericality=>true,
 						:length=>{:is=>10}
 	validates :admin_id, :presence=>true
-
+	
 end

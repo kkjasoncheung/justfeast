@@ -35,5 +35,29 @@
   <%= @restaurant.phone %>
 </p>
 
+<p>
+  <strong>Number of food items</strong>
+  <%= @restaurant.items.size %>
+  <ul>
+    <% @restaurant.items.each do |item| %>
+      <li><%= "#{item.food_category.name} : #{item.name} "%> </li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Restaurant Categories</strong>
+  <ul>
+    <% @restaurant.categories.each do |cat| %>
+      <li><%= cat.name %></li>
+    <% end %>
+  </ul>
+
+</p>
+
+
+
+
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

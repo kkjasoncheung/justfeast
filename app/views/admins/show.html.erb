@@ -30,5 +30,14 @@
   <%= @admin.address %>
 </p>
 
+<p>
+  <strong>Owned Restaurants: <%= pluralize(@admin.restaurants.size,'restaurant') %></strong>
+  <ul>
+    <% @admin.restaurants.each do |rest| %>
+      <li><%= link_to(rest.name, restaurant_path(rest.id)) %> &nbsp; <%= link_to("Restaurant Page", "#") %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
 <%= link_to 'Back', admins_path %>

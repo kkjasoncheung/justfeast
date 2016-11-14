@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  layout "container"
+
   # GET /items
   # GET /items.json
   def index
@@ -15,16 +17,24 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
+    @restaurants = Restaurant.all
+    @food_categories = FoodCategory.all
   end
 
   # GET /items/1/edit
   def edit
+    @food_categories = FoodCategory.all
+    @restaurants = Restaurant.all
+
   end
 
   # POST /items
   # POST /items.json
   def create
+    @food_categories = FoodCategory.all
+
     @item = Item.new(item_params)
+    @restaurants = Restaurant.all
 
     respond_to do |format|
       if @item.save
@@ -40,6 +50,8 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    @restaurants = Restaurant.all
+    @food_categories = FoodCategory.all
     respond_to do |format|
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
@@ -69,6 +81,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :price, :description)
+      params.require(:item).permit(:name, :price, :description, :restaurant_id, :food_category_id)
     end
 end

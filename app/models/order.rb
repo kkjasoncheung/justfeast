@@ -5,7 +5,7 @@ class Order < ApplicationRecord
 	belongs_to :restaurant
 
 	# validations
-	validates :price, :presence=>true, :numericality 
+	validates :price, :presence=>true, :numericality=>true
 	validates :user_id, :presence=>true
 	validates :restaurant_id, :presence=>true
 

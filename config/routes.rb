@@ -7,12 +7,15 @@ Rails.application.routes.draw do
 
   get 'public/login'
 
+
   resources :orders
   resources :items
   resources :categories
   resources :admins
   resources :restaurants
   resources :users
+  resources :food_categories
+
 
   resources :public do
 
