@@ -6,7 +6,7 @@ class Restaurant < ApplicationRecord
 	has_many :orders
 	has_and_belongs_to_many :categories
 	has_many :items
-
+	has_many :food_categories, :through=>:items
 
 	#validations
 

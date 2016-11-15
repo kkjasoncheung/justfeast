@@ -16,5 +16,11 @@ class PublicController < ApplicationController
   
   end
 
+  def restaurant_page
+    @restaurant = Restaurant.find(2)
+  end
 
+  def addItem
+    # need ajax to add item to cart
+  end
 end

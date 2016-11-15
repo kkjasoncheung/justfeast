@@ -16,17 +16,20 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @items = Item.all
   end
 
   # GET /orders/1/edit
   def edit
+    @items = Item.all
+
   end
 
   # POST /orders
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-
+    @items = Item.all
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
@@ -41,6 +44,7 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
+    @items = Item.all
     respond_to do |format|
       if @order.update(order_params)
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }

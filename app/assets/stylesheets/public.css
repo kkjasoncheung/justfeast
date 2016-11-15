@@ -192,6 +192,21 @@
 }
 
 
-
 /* Stop styling for footer */
+
+/* restaurant_page.html.erb styles */
+.menu-sidebar ul {
+	list-style: none;
+	font-size: 20px;
+	text-align: left;
+}
+
+.main-food-area{
+	margin-left:20px;
+}
+
+.main-food-table tr td{
+	font-size: 20px;
+}
+
 

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   get 'public/login'
 
-
   resources :orders
   resources :items
   resources :categories
@@ -27,8 +26,10 @@ Rails.application.routes.draw do
   resources :public do
 
     collection do
+      get :restaurant_page 
       get :login
       get :help #creates help_public_index_path
+      post :add_item
     end 
 
   end

@@ -15,7 +15,9 @@
 			</div>
 
 			<div class="col-md-3 col-sm-12">
-				<button class="btn feed-btn btn-lg">Feed Me!</button>
+				<%# button_to("Feed Me!", restaurant_page_public_index_path, :class=>'btn feed-btn btn-lg') %>
+				<%= link_to("Feed Me!", restaurant_page_public_index_path, :class=>'btn feed-btn btn-lg') %>
+
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-12">

@@ -1,0 +1,38 @@
+<% @page_title = @restaurant.name %>
+
+<div class="container">
+
+	<h1><%= @restaurant.name %></h1>
+	<hr>
+
+	<div class="row">
+
+		<div class="col-md-4 menu-sidebar jumbotron">	
+			<h3>Food Categories</h3>
+			<ul>
+				<% @restaurant.food_categories.each do |fc| %>
+					<li>
+						<%= link_to fc.name.capitalize, "#+#{fc.name}" %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col-md-7 main-food-area ">
+			<% @restaurant.food_categories.each do |fc| %>
+				<h2 class= <%"#{fc.name}"%> ><%= fc.name.capitalize %></h2>
+				<table class="table table-sm main-food-table">
+					<% fc.items.each do |item| %>
+
+						<tr>
+							<td><%= item.name.capitalize %></td>
+							<td class="text-right"><%= link_to "Add", add_item_public_index_path %></td>
+							<td class="text-right">Remove</td>
+		
+						</tr>
+						
+					<% end %>
+				</table>
+			<% end %>
+		</div>
+	</div>
+</div>

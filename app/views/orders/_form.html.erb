@@ -1,4 +1,4 @@
-<%= form_for(order) do |f| %>
+  <%= form_for(order) do |f| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -17,6 +17,27 @@
   </div>
 
   <div class="field">
+    <%= f.label :item_ids, "Item IDs" %>
+    <table>    
+      <% @items.each do |item| %>
+        <tr>
+          <th><%= item.name  %></th>
+          <td>&nbsp;</td>
+          <td><%= item.price %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to("Add",:class=>'add-btn') %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to("Remove", '#')%></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <%= label_tag(:total_items)%>
+  <%= order.items.size %>
+
+
+  <div class="field">
     <%= f.label :requests %>
     <%= f.text_area :requests %>
   </div>
@@ -25,3 +46,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+
