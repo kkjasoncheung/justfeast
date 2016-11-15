@@ -11,7 +11,14 @@ Rails.application.routes.draw do
   resources :orders
   resources :items
   resources :categories
-  resources :admins
+  
+  resources :admins do
+    collection do
+      get :signup # added signup_admins_path
+      get :login # added login_admins_path
+    end
+  end
+
   resources :restaurants
   resources :users
   resources :food_categories
@@ -21,7 +28,7 @@ Rails.application.routes.draw do
 
     collection do
       get :login
-      get :help
+      get :help #creates help_public_index_path
     end 
 
   end
