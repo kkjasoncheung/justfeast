@@ -1,6 +1,6 @@
 # README
 
-<h2>This project is still in development.</h2>
+<h2>This project was just created and is in its early stages of development. However, the landing page has been completed along with the backend database architecture. </h2>
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
