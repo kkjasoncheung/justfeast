@@ -1,6 +1,6 @@
 # README
 
-<h2>This project has just begun and is still in development.</h2>
+<h2>This project is still in development.</h2>
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
